@@ -66,7 +66,7 @@ module Fastlane
 
         response = pgyer_client.post api_host, params
         info = response.body
-
+        puts "蒲公英返回数据#{info}"
         if info['code'] != 0
           UI.user_error!("PGYER Plugin Error: #{info['message']}")
         end
